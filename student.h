@@ -12,5 +12,6 @@ typedef struct {
 void addStudent(Student students[], int *count);
 void displayStudents(Student students[], int count);
 void searchStudent(Student students[], int count);
+void calculateAverage(Student students[], int count);
 
 #endif
