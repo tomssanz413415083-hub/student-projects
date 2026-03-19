@@ -112,3 +112,26 @@ void saveToFile(Student students[], int count) {
     fclose(file);
     printf("Data saved to file successfully.\n");
 }
+
+void loadFromFile(Student students[], int *count) {
+    FILE *file = fopen("data.txt", "r");
+
+    if (file == NULL) {
+        printf("No saved file found.\n");
+        return;
+    }
+
+    *count = 0;
+    while (fscanf(file, " %49[^;];%19[^;];%f",
+                  students[*count].name,
+                  students[*count].id,
+                  &students[*count].score) == 3) {
+        (*count)++;
+        if (*count >= MAX_STUDENTS) {
+            break;
+        }
+    }
+
+    fclose(file);
+    printf("Data loaded from file successfully.\n");
+}
