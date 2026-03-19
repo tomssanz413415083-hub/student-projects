@@ -72,3 +72,23 @@ void calculateAverage(Student students[], int count) {
 
     printf("Average score: %.2f\n", total / count);
 }
+
+void findHighest(Student students[], int count) {
+    int i, highestIndex = 0;
+
+    if (count == 0) {
+        printf("No student data available.\n");
+        return;
+    }
+
+    for (i = 1; i < count; i++) {
+        if (students[i].score > students[highestIndex].score) {
+            highestIndex = i;
+        }
+    }
+
+    printf("Highest score student:\n");
+    printf("Name: %s\n", students[highestIndex].name);
+    printf("ID: %s\n", students[highestIndex].id);
+    printf("Score: %.2f\n", students[highestIndex].score);
+}
