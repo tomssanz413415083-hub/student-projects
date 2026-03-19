@@ -92,3 +92,23 @@ void findHighest(Student students[], int count) {
     printf("ID: %s\n", students[highestIndex].id);
     printf("Score: %.2f\n", students[highestIndex].score);
 }
+
+void saveToFile(Student students[], int count) {
+    FILE *file = fopen("data.txt", "w");
+    int i;
+
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+
+    for (i = 0; i < count; i++) {
+        fprintf(file, "%s;%s;%.2f\n",
+                students[i].name,
+                students[i].id,
+                students[i].score);
+    }
+
+    fclose(file);
+    printf("Data saved to file successfully.\n");
+}
