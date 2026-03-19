@@ -4,8 +4,26 @@
 int main() {
     Student students[MAX_STUDENTS];
     int count = 0;
+    int choice;
 
-    printf("Student Grade Management System\n");
+    do {
+        printf("\n===== Student Grade Management System =====\n");
+        printf("1. Add student\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                addStudent(students, &count);
+                break;
+            case 0:
+                printf("Exiting program.\n");
+                break;
+            default:
+                printf("Invalid choice.\n");
+        }
+    } while (choice != 0);
 
     return 0;
 }
