@@ -10,5 +10,6 @@ typedef struct {
 } Student;
 
 void addStudent(Student students[], int *count);
+void displayStudents(Student students[], int count);
 
 #endif
