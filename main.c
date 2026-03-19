@@ -12,6 +12,7 @@ int main() {
         printf("2. Display all students\n");
         printf("3. Search student by ID\n");
         printf("4. Calculate average score\n");
+	printf("5. Find highest score\n");
         printf("0. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -28,6 +29,9 @@ int main() {
                 break;
             case 4:
                 calculateAverage(students, count);
+                break;
+	    case 5:
+                findHighest(students, count);
                 break;
             case 0:
                 printf("Exiting program.\n");
