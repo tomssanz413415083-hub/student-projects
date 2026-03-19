@@ -14,5 +14,6 @@ void displayStudents(Student students[], int count);
 void searchStudent(Student students[], int count);
 void calculateAverage(Student students[], int count);
 void findHighest(Student students[], int count);
+void saveToFile(Student students[], int count);
 
 #endif
