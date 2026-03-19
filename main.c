@@ -10,6 +10,7 @@ int main() {
         printf("\n===== Student Grade Management System =====\n");
         printf("1. Add student\n");
         printf("2. Display all students\n");
+        printf("3. Search student by ID\n");
         printf("0. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -20,6 +21,9 @@ int main() {
                 break;
             case 2:
                 displayStudents(students, count);
+                break;
+            case 3:
+                searchStudent(students, count);
                 break;
             case 0:
                 printf("Exiting program.\n");
