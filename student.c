@@ -14,3 +14,21 @@ void addStudent(Student students[], int *count) {
     (*count)++;
     printf("Student added successfully.\n");
 }
+
+void displayStudents(Student students[], int count) {
+    int i;
+
+    if (count == 0) {
+        printf("No student data available.\n");
+        return;
+    }
+
+    printf("\n=== Student List ===\n");
+    for (i = 0; i < count; i++) {
+        printf("%d. Name: %s | ID: %s | Score: %.2f\n",
+               i + 1,
+               students[i].name,
+               students[i].id,
+               students[i].score);
+    }
+}
