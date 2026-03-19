@@ -14,6 +14,7 @@ int main() {
         printf("4. Calculate average score\n");
 	printf("5. Find highest score\n");
 	printf("6. Save data to file\n");
+	printf("7. Load data from file\n");
         printf("0. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -36,6 +37,9 @@ int main() {
                 break;
 	    case 6:
                 saveToFile(students, count);
+                break;
+	    case 7:
+                loadFromFile(students, &count);
                 break;
             case 0:
                 printf("Exiting program.\n");
