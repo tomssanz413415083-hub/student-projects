@@ -56,3 +56,19 @@ void searchStudent(Student students[], int count) {
         printf("Student not found.\n");
     }
 }
+
+void calculateAverage(Student students[], int count) {
+    int i;
+    float total = 0;
+
+    if (count == 0) {
+        printf("No student data available.\n");
+        return;
+    }
+
+    for (i = 0; i < count; i++) {
+        total += students[i].score;
+    }
+
+    printf("Average score: %.2f\n", total / count);
+}
